@@ -1,0 +1,16 @@
+<h1>Heroes <small>Marvel y DC</small></h1>
+<div class="col-md-4 animated fadeIn fast" *ngFor="let hero of heroes; let i=index">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <img [src]="hero.img" [alt]="hero.nombre" width="100%">
+    </div>
+    <div class="panel-body">
+      <h4>{{ hero.nombre }}</h4>
+      <p> {{ hero.bio }} </p>
+      <p><small>{{ hero.aparicion }}</small></p>
+    </div>
+    <div class="panel-footer">
+      <button class="btn btn-primary btn-block" (click)="verHeroe(i)">Ver Heroe</button></div>
+      <!--<a class="btn btn-primary btn-block" [routerLink]="['/heroe',index]">Ver Heroe</a></div>-->
+  </div>
+</div>
